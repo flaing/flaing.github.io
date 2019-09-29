@@ -1,0 +1,22 @@
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Writing database to /Users/flaingRudi/code/flaing.github.io/db.json","time":"2019-09-27T23:27:00.045Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Hexo version: \u001b[35m3.8.0\u001b[39m","time":"2019-09-27T23:27:00.067Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Working directory: \u001b[35m~/code/flaing.github.io/\u001b[39m","time":"2019-09-27T23:27:00.068Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Config loaded: \u001b[35m~/code/flaing.github.io/_config.yml\u001b[39m","time":"2019-09-27T23:27:00.162Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-deployer-git\u001b[39m","time":"2019-09-27T23:27:00.282Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-category\u001b[39m","time":"2019-09-27T23:27:00.284Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-archive\u001b[39m","time":"2019-09-27T23:27:00.286Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-feed\u001b[39m","time":"2019-09-27T23:27:00.290Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-index\u001b[39m","time":"2019-09-27T23:27:00.291Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-tag\u001b[39m","time":"2019-09-27T23:27:00.293Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-ejs\u001b[39m","time":"2019-09-27T23:27:00.295Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-marked\u001b[39m","time":"2019-09-27T23:27:00.350Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-stylus\u001b[39m","time":"2019-09-27T23:27:00.351Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-server\u001b[39m","time":"2019-09-27T23:27:00.406Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/merge-configs.js\u001b[39m","time":"2019-09-27T23:27:00.411Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/center-quote.js\u001b[39m","time":"2019-09-27T23:27:00.412Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Script loaded: \u001b[35mthemes/next/scripts/tags/full-image.js\u001b[39m","time":"2019-09-27T23:27:00.412Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":30,"msg":"Deploying: \u001b[35mgit\u001b[39m","time":"2019-09-27T23:27:00.415Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":30,"msg":"Clearing .deploy folder...","time":"2019-09-27T23:27:00.429Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":30,"msg":"Copying files from public folder...","time":"2019-09-27T23:27:00.504Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":30,"msg":"Deploy done: \u001b[35mgit\u001b[39m","time":"2019-09-27T23:27:10.669Z","v":0}
+{"name":"hexo","hostname":"Chun-Haos-MacBook-Pro.local","pid":80472,"level":20,"msg":"Database saved","time":"2019-09-27T23:27:10.674Z","v":0}
