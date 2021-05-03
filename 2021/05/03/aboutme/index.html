@@ -55,13 +55,13 @@
 <div class="blog-post">
     <!-- Title -->
     <h1 class="blog-post-title">
-        <a href="/2021/05/01/aboutme/">
+        <a href="/2021/05/03/aboutme/">
             About Me
         </a>
     </h1>
     <!-- Date and Author -->
     <p class="blog-post-meta">
-        2021-05-01
+        2021-05-03
         
     </p>
 
@@ -91,16 +91,51 @@
 
 <h2 id="Skills"><a href="#Skills" class="headerlink" title="Skills"></a>Skills</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Cyber Security</span><br><span class="line">Software Engineering</span><br><span class="line">Circuit Design</span><br></pre></td></tr></table></figure>
 
-<h2 id="Some-photos"><a href="#Some-photos" class="headerlink" title="Some photos"></a>Some photos</h2><p><img src="/2021/05/01/aboutme/behaviorp.jpg" alt="Behavior Pyramid"><br><img src="/2021/05/01/aboutme/behaviorp1.jpg" alt="Behavior Pyramid examples"></p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<h2 id="Random-Stuffs-Crypto-Ransomware-Highlights"><a href="#Random-Stuffs-Crypto-Ransomware-Highlights" class="headerlink" title="Random Stuffs: Crypto Ransomware Highlights"></a>Random Stuffs: Crypto Ransomware Highlights</h2><h3 id="Assumptions-and-Problem-Statements-from-Attackers’-Perspectives"><a href="#Assumptions-and-Problem-Statements-from-Attackers’-Perspectives" class="headerlink" title="Assumptions and Problem Statements from Attackers’ Perspectives"></a>Assumptions and Problem Statements from Attackers’ Perspectives</h3><p>After getting into the discussions about ransomware on Deep Web throughout several years, we generalize following assumptions and problem statements.</p>
+<p>In assumptions, </p>
+<ul>
+<li>The adversaries touch as much core infrastructure as possible.</li>
+<li>The adversaries escalate as much privilege as possible.</li>
+<li>The adversaries block the availability altogether.</li>
+</ul>
+<ol start="4">
+<li>The users will have no options unless they pay the ransomware.</li>
+<li>The adversaries only ask for ransom that the users have ability to pay.</li>
+<li>Even if the defenders detect, the defenders cannot prevent human-factor vulnerabilities, social engineering and phishing altogether.</li>
+</ol>
+<ul>
+<li>The prevention system can be bypassed through human-factor vulnerabilities.</li>
+<li>The provenance of the payment can be put in obscurity.</li>
+<li>The communication channels should be simple. The anonymity should be maintained.</li>
+</ul>
+<ol start="10">
+<li>The workstations of adversaries should be encrypted. The servers of adversaries should not be suspicious, not be captured by law enforcement.</li>
+</ol>
+<p>Hence from assumptions, we have problem statements (from attackers’ perspectives): </p>
+<p>The ransomware should efficiently deny users’ access to the systems altogether, in other word, to cut off the availability once and for all unless a ransom is paid. That includes to prevent the users from recovering the files. For example, the ransomware should have the ability to use vssadmin to remove all shadow copies and rename before the fine-grained deletions and encryptions of files are done, and have the ability to maneuver BCDEdit (boot config) for locker screen and payment instruction. The ransomware infrastructures should offer Command and Controls, Anonymity, and payment, for example, using zombie, tor, offline message, bitcoin.</p>
+<h3 id="Prevention-and-Detection"><a href="#Prevention-and-Detection" class="headerlink" title="Prevention and Detection"></a>Prevention and Detection</h3><p>Prevention and Detection is the most common practice. A lot of cybersecurity professionals suggest to use IDS, firewalls, and Anti-virus as intense as possible. However, those solutions have major flaws in performance and effectiveness.</p>
+<p>For example, one of best anomaly detetion so far, Kharaz et al. proposed UNVEIL as a cloud-based anomaly detection prototype. It has very high acuracy after the threshold (0.32). However it requires high demands in network traffic and dynamic analysis overheads in CPU and memory. Other similar cloud-based anomaly detection has less efficiency, yet costs higher overheads. </p>
+<p>In one of the best deep learning -based anomaly detection, Vinayakumar et al. proposed a MLP (multi-layer perceptron) detection on ransomware, based on workflow of SVM (support vector machine) and ANN (artificial neural network), constituting a very high accuracy. However as expected, this solution requires extremely unreasonable overheads in CPU and GPU, rendering them infeasible. Other similar solutions may have higher overheads and FNR (false negative rate), yet lower accuracy.</p>
+<p>In one of the best network pattern -based ransomware detection, Cabaj et al. proposed SDN-based crypto ransomware detection using HTTP traffic characteristics. The solution is fortunately to have extremely high performance, and fair accuracy. However, attackers could change the configuration of their ransowmare software, and the new versions of ransomware can avoid such categorized and written patterns.</p>
+<h3 id="Recovery-–-The-principle-of-Fail-Safe-Default"><a href="#Recovery-–-The-principle-of-Fail-Safe-Default" class="headerlink" title="Recovery – The principle of Fail-Safe Default"></a>Recovery – The principle of Fail-Safe Default</h3><p>Recovery in the world of ransomware research means how to fail-safe: to non-IT members, IT members, and to system level preparations. Zhang-Kennedy found there is huge reduction of risks and incidents during and after anti-ransomware training for non-IT employees. Fagioli proposed Zero-day recovery to train IT with better preparation on the Principle of Fail-Safe Defaults. For example, if all the focus is placed on cyber defence, what happens when those defences are breached? A lot of successful ransomware attacks come from a lack of understanding of business logic, and a lack of authority over assets. Baek et al. proposed SSD-Insider. Their solution is effective and efficient in both ransomware detection and shadow copies recovery, nearly guaranteed against conventional modern ransomware attacks. The only requirements for this solution are SSD hardware purchase and replacement. </p>
+<p>However, though the Fail-Safe Recovery Plans is important, effective and efficient, the Fail-Safe Recovery Plans were unfortunately the least to be implemented, being easier said than done. The primary reason is the nonalignment between business department and IT department within organizations.</p>
+<h3 id="Financial-Infrastructure"><a href="#Financial-Infrastructure" class="headerlink" title="Financial Infrastructure"></a>Financial Infrastructure</h3><p>Forensic researchers and law enforcement are interested in tracing the financial infrastructure of ransomware without breaking the privacy of user agreements in victims’ systems. Liao et al. analyze Cryptolocker activities in Bitcoin with cluster-based network graphs. Kharraz et al. generalize the shared features of ransomw payments. Huang et al. proposed the earliest research paper on end-to-end ransomware payments, including aggregation address to exchange address. </p>
+<p>Literally all ransomware families share features of transactions as bellow: short activity period, small Bitcoin (or other “E-Money”) amounts, small number of transactions per node. A lot of researchers use the features to understand ransomware financial infrastructures. Some of them used AI to reduce dimensions and classify transactions to reveal potential ransom payment graphs. But all of the research focus on clusters and networks, rather than individual deanonymization.</p>
+<h3 id="Some-photos"><a href="#Some-photos" class="headerlink" title="Some photos"></a>Some photos</h3><p><img src="/2021/05/03/aboutme/behaviorp.jpg" alt="Behavior Pyramid"><br><img src="/2021/05/03/aboutme/behaviorp1.jpg" alt="Behavior Pyramid examples"></p>
 
 
     <!-- Social share choices -->
     
   <div id="social-share">
-    <a data-url="http://flaing.github.io/2021/05/01/aboutme/" target="_blank" rel="noopener" href="https://plus.google.com/share?url=" class="googleplus"><img src="/image/googleplusicon.png" alt=""/></a>
-    <a data-url="http://flaing.github.io/2021/05/01/aboutme/" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=" class="twitter"><img src="/image/twittericon.png" alt=""/></a>
-    <a data-url="http://flaing.github.io/2021/05/01/aboutme/" target="_blank" rel="noopener" href="http://pinterest.com/pin/create/button/?url=" class="pinterest"><img src="/image/pinteresticon.png" alt=""/></a>
-    <a data-url="http://flaing.github.io/2021/05/01/aboutme/" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=" class="facebook"><img src="/image/facebookicon.png" alt=""/></a>
+    <a data-url="http://flaing.github.io/2021/05/03/aboutme/" target="_blank" rel="noopener" href="https://plus.google.com/share?url=" class="googleplus"><img src="/image/googleplusicon.png" alt=""/></a>
+    <a data-url="http://flaing.github.io/2021/05/03/aboutme/" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=" class="twitter"><img src="/image/twittericon.png" alt=""/></a>
+    <a data-url="http://flaing.github.io/2021/05/03/aboutme/" target="_blank" rel="noopener" href="http://pinterest.com/pin/create/button/?url=" class="pinterest"><img src="/image/pinteresticon.png" alt=""/></a>
+    <a data-url="http://flaing.github.io/2021/05/03/aboutme/" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=" class="facebook"><img src="/image/facebookicon.png" alt=""/></a>
   </div>
 
 
@@ -110,8 +145,8 @@
 <!--
 
 
-https://www.facebook.com/sharer/sharer.php?u=http://flaing.github.io/2021/05/01/aboutme/
-http://flaing.github.io/2021/05/01/aboutme/
+https://www.facebook.com/sharer/sharer.php?u=http://flaing.github.io/2021/05/03/aboutme/
+http://flaing.github.io/2021/05/03/aboutme/
 -->
 
 
