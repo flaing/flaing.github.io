@@ -808,6 +808,106 @@ mjx-container[display="true"] + br {
 <li>剖析這套系統如何利用现代金融體制與跨國企業模式，在歷史和神學被證偽後，依然能成功維持其龐大的俗世帝國？</li>
 </ul>
 <p>[1] <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E8%A5%BF%E6%96%B9%E5%81%BD%E5%8F%B2%E8%AB%96">https://zh.wikipedia.org</a><br>[2] <a target="_blank" rel="noopener" href="https://www.facebook.com/100082884805027/posts/%E5%8F%8B%E7%AB%99%E9%87%91%E8%80%81%E3%84%95%E7%9A%84%E6%95%99%E5%AD%B8%E6%97%A5%E8%AA%8C%E4%BB%8A%E5%A4%A9%E8%88%87%E8%A5%BF%E6%96%B9%E5%81%BD%E5%8F%B2%E8%AB%96%E4%BA%A4%E6%89%8B%E9%80%99%E8%A3%A1%E5%8F%AF%E4%BB%A5%E8%A3%9C%E5%85%85%E7%9A%84%E6%98%AF%E5%8D%B3%E4%BD%BF%E5%BE%9E%E4%BC%8A%E6%96%AF%E8%98%AD%E7%9A%84%E8%A6%96%E8%A7%92%E4%BE%86%E7%9C%8B%E8%A5%BF%E6%96%B9%E5%81%BD%E5%8F%B2%E8%AB%96%E4%B9%9F%E6%98%AF%E6%B2%92%E6%9C%89%E9%81%93%E7%90%86%E7%9A%84%E8%A5%BF%E6%96%B9%E5%81%BD%E5%8F%B2%E8%AB%96%E7%9A%84%E6%94%AF%E6%8C%81%E8%80%85%E5%A4%A7%E5%A4%9A%E6%8A%B1%E8%91%97%E6%A5%B5%E7%AB%AF%E6%87%B7%E7%96%91%E8%AB%96%E7%9A%84%E8%A7%92%E5%BA%A6%E8%B3%AA%E7%96%91%E4%B8%80%E5%88%87%E8%A5%BF%E6%96%B9%E5%8F%A4%E5%8F%B2/935379332568218/">https://www.facebook.com</a><br>[3] <a target="_blank" rel="noopener" href="https://www.reddit.com/r/mormon/comments/1b0j7y3/the_totality_of_evidence_against_the_book_of/">https://www.reddit.com</a><br>[4] <a target="_blank" rel="noopener" href="https://www.instagram.com/reel/DMFaAB0NAW6/">https://www.instagram.com</a></p>
+<p>在沒有 Git、甚至連 SVN 都還沒誕生的 1993 至 1995 年間，<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E5%A7%9A%E5%A3%AF%E6%86%B2">大宇資訊</a>「狂徒創作群」開發《仙劍奇俠傳一》的真實底層，是依靠人工口頭協調、3.5吋磁碟機（Floppy Disk）、實體筆記本，以及一套被稱為「純手工拷貝」的原始流程。<br>當時的程式碼是由姚壯憲（姚仙）以 QuickBASIC 搭配部分組合語言在 DOS 環境下撰寫，而美術（如謝崇輝）、企劃與音樂則各自在獨立的電腦上作業。由於沒有網路集中倉儲（Repository），也沒有自動化的分支合併（Merge），代碼與資源的衝突完全靠「人肉排班」來解決。<br>以下結合歷史事實（大宇當時搬遷至台北忠孝東路、狂徒小組逐步成軍、姚仙與謝崇輝等人的開發分工）與技術分析，模擬出《仙劍一》開發中期（約 1994 年，正進行鎖妖塔或揚州城章節）的「經典開發一週 Scenario（場景模擬）」。</p>
+<hr>
+<h2 id="📅-《仙劍奇俠傳一》1994-年某週開發場景模擬-週一：週會與「原始的代碼鎖定」"><a href="#📅-《仙劍奇俠傳一》1994-年某週開發場景模擬-週一：週會與「原始的代碼鎖定」" class="headerlink" title="📅 《仙劍奇俠傳一》1994 年某週開發場景模擬## 週一：週會與「原始的代碼鎖定」"></a>📅 《仙劍奇俠傳一》1994 年某週開發場景模擬## 週一：週會與「原始的代碼鎖定」</h2><ul>
+<li>AM 10:00 忠孝東路大宇辦公室會議</li>
+<li>開會場景：姚壯憲、謝崇輝與幾位美術、企劃圍在放滿 CRT 大頭螢幕的桌前。<ul>
+<li>核心議題：李逍遙、林月如進入「揚州城」的劇情觸發與戰鬥平衡。</li>
+<li>沒有 Git 的解決方案：姚仙拿出一個實體筆記本（代碼登記簿），宣布：「這週我要大改戰鬥主程式（BATTLE.BAS）的屬性計算，四、五兩天任何人都不准動戰鬥模組的檔案。美術謝崇輝這週要把揚州客棧的場景圖（MAP05.DAT）畫完，週三用磁碟機交給我。」</li>
+<li>痛點：這就是當時的 “Lock-modify-unlock”（鎖定-修改-解鎖） 流程。沒有 Git Branch（分支），所有人只能在同一個「主幹（Master）」上輪流排隊。如果兩個人同時改了同一個檔案，唯一的下場就是其中一個人的心血被完全覆蓋。</li>
+</ul>
+</li>
+</ul>
+<h2 id="週二：個人各自孤島開發"><a href="#週二：個人各自孤島開發" class="headerlink" title="週二：個人各自孤島開發"></a>週二：個人各自孤島開發</h2><ul>
+<li>PM 02:00 美術與程式的各自奮戰</li>
+<li>場景：謝崇輝用著隨身碟的前身——3.5吋磁碟機（容量僅 1.44MB），將手繪後掃描、並用 Deluxe Paint 處理好的李逍遙「飛龍探雲手」動態格數（Sprite）格點一張張微調。<ul>
+<li>技術限制：因為沒有 Git 追蹤檔案變更（Diff），美術無法看見程式碼的進度。謝崇輝必須在紙上寫下：「飛龍探雲手：共 12 幀，起點座標 (x:40, y:60)」，並將這些數值手寫在便條紙上，貼在姚仙的螢幕邊框。</li>
+</ul>
+</li>
+</ul>
+<h2 id="週三：最驚心動魄的「磁碟機人工合併」"><a href="#週三：最驚心動魄的「磁碟機人工合併」" class="headerlink" title="週三：最驚心動魄的「磁碟機人工合併」"></a>週三：最驚心動魄的「磁碟機人工合併」</h2><ul>
+<li>PM 04:00 「你那邊是最新的嗎？」</li>
+<li>場景：美術完成揚州城迷宮地圖，企劃也寫好了 NPC 的對話腳本（Script）。<ul>
+<li>人工 Merge：企劃拿著一張貼著標籤寫有「揚州NPC最新版_0315」的 3.5 吋磁碟機，走到姚仙的電腦前插進磁碟機 A:。</li>
+<li>姚仙的動作：打開 DOS 視窗，手打指令 copy A:\SCENE.DAT C:\PAL\DATA\ &#x2F;Y。那個 &#x2F;Y 代表強行覆蓋。</li>
+<li>悲劇發生：覆蓋後，姚仙一編譯突然噴出滿螢幕的錯誤。原來企劃忘了前天姚仙曾為了修正 Bug，在自己電腦上偷偷改過 SCENE.DAT 的結構。現在一覆蓋，舊的修正全部消失了。</li>
+<li>解決方法：沒有 git diff，沒有 git log。姚仙只能搬兩台 CRT 螢幕並排，用肉眼一行一行比對 QuickBASIC 的原始碼，找出到底是哪裡漏了。這一熬，就是半夜兩點。</li>
+</ul>
+</li>
+</ul>
+<h2 id="週四：測試、崩潰與「版本地獄」"><a href="#週四：測試、崩潰與「版本地獄」" class="headerlink" title="週四：測試、崩潰與「版本地獄」"></a>週四：測試、崩潰與「版本地獄」</h2><ul>
+<li>AM 11:00 執行檔亂套</li>
+<li>為了測試揚州城的姬三娘戰鬥，姚仙必須編譯出一個測試用的 PAL.EXE。<ul>
+<li>當時為了保留不同階段的進度，他們的硬碟資料夾長這樣：</li>
+<li>C:\PAL_BAK\<ul>
+<li>C:\PAL_NEW\</li>
+<li>C:\PAL_FINAL\</li>
+<li>C:\PAL_REAL_FINAL_DONT_TOUCH\</li>
+</ul>
+</li>
+<li>場景：團隊成員過來回報：「姚大，我用昨天的版本測，李逍遙學會御劍術後，回客棧畫面就黑掉了。」姚仙一查，快要崩潰：「你抓的是 PAL_NEW 還是 PAL_FINAL？那是上週的舊 Bug，我已經在 REAL_FINAL 改過了！快把你的磁碟機拿過來，我拷貝最新編譯的 EXE 給你！」</li>
+</ul>
+</li>
+</ul>
+<h2 id="週五：週末前的「大統整（Manual-Integration）」與燒錄備份"><a href="#週五：週末前的「大統整（Manual-Integration）」與燒錄備份" class="headerlink" title="週五：週末前的「大統整（Manual Integration）」與燒錄備份"></a>週五：週末前的「大統整（Manual Integration）」與燒錄備份</h2><ul>
+<li>PM 05:00 實體備份儀式</li>
+<li>場景：一週的開發進入尾聲，必須做出一個能玩到揚州城結束的穩定版本。<ul>
+<li>沒有 CI&#x2F;CD 自動化整合：所有人停止手邊工作。姚仙化身為「人肉整合器」，確認大家的 3.5 吋磁碟機都收齊了，將最新的代碼、地圖、音樂（MIDI 檔）全數手動複製到他的主力電腦中。</li>
+<li>終極備份：確認可以執行後，姚仙拿出當時極為珍貴的可重複讀寫光碟（CD-RW）或是硬碟備份匣，將整個資料夾打包，在光碟殼上用麥克筆寫下：1994_03_18_揚州城完工版。</li>
+<li>這張光碟，就是他們那週的 git commit。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="💡-歷史事實與現代技術的對比分析"><a href="#💡-歷史事實與現代技術的對比分析" class="headerlink" title="💡 歷史事實與現代技術的對比分析"></a>💡 歷史事實與現代技術的對比分析</h2><p>如果把當時《仙劍一》的開發模式與現在使用 Git 的模式做個對比，就能看出當時在技術匱乏下，這群華人單機遊戲先驅是用多麼強大的肉體意志力與專注度去克服工具限制的：</p>
+<table>
+<thead>
+<tr>
+<th>開發行為</th>
+<th>1995年《仙劍奇俠傳》的做法</th>
+<th>現代 Git 的做法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>程式碼平行開發</td>
+<td>必須互相口頭通知「鎖定檔案」，同一時間只有一個人能改戰鬥或劇情模組。</td>
+<td>使用 git branch 開啟不同分支，各自開發後再合併。</td>
+</tr>
+<tr>
+<td>追蹤是誰改壞代碼</td>
+<td>翻閱實體筆記本，或大家互相大喊：「誰昨天動了這個檔案？！」</td>
+<td>使用 git blame 一秒查出是誰在哪一天改了哪一行。</td>
+</tr>
+<tr>
+<td>版本衝突（Conflict）</td>
+<td>完全靠肉眼比對、或直接覆蓋，覆蓋錯了只能從昨天的備份磁碟機重寫。</td>
+<td>Git 會自動標示衝突區塊，由工程師進行 git merge。</td>
+</tr>
+<tr>
+<td>歷史紀錄回滾</td>
+<td>找出上週燒錄的實體光碟，重新讀取，但這週寫的程式就全部沒了。</td>
+<td>使用 git checkout <commit_id>，精準回到任一歷史時間點。</td>
+</tr>
+</tbody></table>
+<p>結論：<br>在沒有 Git 的時代，《仙劍一》之所以耗時兩年四個月才完工，除了姚壯憲對劇情的精益求精外，極高的「人肉管理成本」與「版本混亂引發的 Bug」也是主因。那一代的經典，全靠開發者們用超乎常人的記憶力、便條紙、以及一盒盒的 3.5 吋磁碟機，在無數次「代碼被覆蓋」的崩潰淚水中，純手工拼湊出來的。</p>
+<hr>
+<p>如果你對當時的某個技術細節想深入了解（例如：當時美術資源如何打包、或是DOS的記憶體限制（640KB）如何折磨姚仙），我們可以隨時繼續聊聊！</p>
+<p>是的，沒錯！當時大宇資訊總部的確就在北科大（當時稱為「台北工專」）的附近，地理位置上就在光華商場與北科大構成的台北早期電子資訊核心商圈內。<br>根據歷史資料記載，大宇資訊於 1994 年將總公司遷至「台北市中正區忠孝東路二段 88 號 8 樓」，這個地址正是現在的「<a target="_blank" rel="noopener" href="https://www.google.com/maps">華山商務大樓</a>」（靠近忠孝東路與金山北路交叉口）。 [1] </p>
+<h2 id="📍-當時「狂徒小組」的具體地理位置"><a href="#📍-當時「狂徒小組」的具體地理位置" class="headerlink" title="📍 當時「狂徒小組」的具體地理位置"></a>📍 當時「狂徒小組」的具體地理位置</h2><p>如果從現代的地標來對照，你就能想像姚仙、謝崇輝他們當年的生活圈多麼具有「科技宅」的氣息：</p>
+<ul>
+<li>大宇總部（忠孝東路二段 88 號）：大樓的一樓現在是彰化銀行忠孝東路分行。</li>
+<li>與北科大的距離：從大宇辦公室下樓，沿著忠孝東路二段往三段方向（往東）走，經過金山北路、新生高架橋，步行只要約 5 到 7 分鐘（大約 450 公尺），就會抵達國立臺北科技大學（當時的台北工專校區）。</li>
+<li>與舊光華商場的距離：當時位於光華橋下的「舊光華商場」，就在大宇辦公室的東北方，走路同樣不用 10 分鐘。 [1, 2, 3]</li>
+</ul>
+<h2 id="💻-歷史場景的趣味補充：為什麼這個位置對《仙劍一》很重要？"><a href="#💻-歷史場景的趣味補充：為什麼這個位置對《仙劍一》很重要？" class="headerlink" title="💻 歷史場景的趣味補充：為什麼這個位置對《仙劍一》很重要？"></a>💻 歷史場景的趣味補充：為什麼這個位置對《仙劍一》很重要？</h2><p>大宇選在這個地點開發《仙劍一》，在當時的時空背景下有非常完美的策略與生活優勢：</p>
+<ol>
+<li>買 3.5 吋磁碟機與硬體超方便：<br>   誠如前面提到，當時《仙劍》團隊每天要消耗大量的 3.5 吋磁碟機、燒錄光碟等耗材，且 DOS 時代的電腦動不動就因為記憶體（640KB 限制）或顯示卡（VGA 256色）出問題。姚仙或企劃們只要下樓走幾步路，就能到光華商場或北科大週邊的電子商圈採購最新零件、空片或磁碟條。 [2, 4] </li>
+<li>工程師與動漫次文化的交匯點：<br>   當時的光華商場除了賣電腦硬體，也是台灣早期日本動漫、電玩雜誌、MIDI 音樂軟體以及外國正&#x2F;盜版遊戲的集散地。狂徒創作群在思考《仙劍》的戰鬥分鏡（如李逍遙的帥氣揮劍）或尋求靈感時，那一帶的次文化氛圍提供了極大的養分。 [5] </li>
+<li>吃宵夜的聖地：<br>   當年狂徒小組為了《仙劍一》幾乎天天熬夜趕工。北科大與光華商場週邊在深夜有非常多專門賣給附近學生、電子店家與晚班上班族的「重口味小吃」（像是著名的光華垃圾麵、牛肉麵、碳烤等），是姚仙與團員們深夜加班爆肝時最重要的熱量來源。 [4, 5, 6]</li>
+</ol>
+<p>所以，你直覺非常準！《仙劍奇俠傳一》正是在北科大與光華商場這一片充滿台灣早期 IT 產業與電子零件黑手氣息的「忠孝東路」上，被純手工打造出來的。 [1, 2]<br>若你對當年的台北遊戲開發聚落，或者是大宇在忠孝東路辦公室內的其他經典八卦（例如鄰近的 DOMO 小組如何一邊開發《軒轅劍》一邊跟狂徒群串門子）感興趣，我們可以繼續聊聊！</p>
+<p>[1] <a target="_blank" rel="noopener" href="https://richman.fandom.com/zh/wiki/%E5%A4%A7%E5%AE%87%E8%B3%87%E8%A8%8A">https://richman.fandom.com</a><br>[2] <a target="_blank" rel="noopener" href="https://www.travelking.com.tw/tourguide/scenery101687.html">https://www.travelking.com.tw</a><br>[3] <a target="_blank" rel="noopener" href="https://www.google.com/searchviewer/10?svid=CAwSGBIWCgNwdnESD0Nna3ZiUzh3TTJKa05uURgK">https://www.google.com</a><br>[4] <a target="_blank" rel="noopener" href="https://www.google.com/searchviewer/10?svid=CAwSGRIXCgNwdnESEENnb3ZiUzh3TkdSZk4zWjQYCg">https://www.google.com</a><br>[5] <a target="_blank" rel="noopener" href="https://forum.gamer.com.tw/Co.php?bsn=2417&sn=107475">https://forum.gamer.com.tw</a><br>[6] <a target="_blank" rel="noopener" href="https://www.google.com/searchviewer/10?svid=CAwSHBIaCgNwdnESE0Nnd3ZaeTh4Y0hweWNXWjZNV3cYCg">https://www.google.com</a></p>
 
     <!-- Only display the Read More link if we are displaying an excerpt -->
     
