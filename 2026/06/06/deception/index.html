@@ -719,20 +719,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="週四：測試、崩潰與「版本地獄」"><a href="#週四：測試、崩潰與「版本地獄」" class="headerlink" title="週四：測試、崩潰與「版本地獄」"></a>週四：測試、崩潰與「版本地獄」</h2><ul>
-<li>AM 11:00 執行檔亂套</li>
-<li>為了測試揚州城的姬三娘戰鬥，姚仙必須編譯出一個測試用的 PAL.EXE。<ul>
-<li>當時為了保留不同階段的進度，他們的硬碟資料夾長這樣：</li>
-<li>C:\PAL_BAK\<ul>
-<li>C:\PAL_NEW\</li>
-<li>C:\PAL_FINAL\</li>
-<li>C:\PAL_REAL_FINAL_DONT_TOUCH\</li>
-</ul>
-</li>
-<li>場景：團隊成員過來回報：「姚大，我用昨天的版本測，李逍遙學會御劍術後，回客棧畫面就黑掉了。」姚仙一查，快要崩潰：「你抓的是 PAL_NEW 還是 PAL_FINAL？那是上週的舊 Bug，我已經在 REAL_FINAL 改過了！快把你的磁碟機拿過來，我拷貝最新編譯的 EXE 給你！」</li>
-</ul>
-</li>
-</ul>
+<h2 id="週四：測試、崩潰與「版本地獄」"><a href="#週四：測試、崩潰與「版本地獄」" class="headerlink" title="週四：測試、崩潰與「版本地獄」"></a>週四：測試、崩潰與「版本地獄」</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">* AM 11:00 執行檔亂套</span></span><br><span class="line"><span class="comment">* 為了測試揚州城的姬三娘戰鬥，姚仙必須編譯出一個測試用的 PAL.EXE。</span></span><br><span class="line"><span class="comment">   * 當時為了保留不同階段的進度，他們的硬碟資料夾長這樣：</span></span><br><span class="line"><span class="comment">   * C:\PAL_BAK\</span></span><br><span class="line"><span class="comment">      * C:\PAL_NEW\</span></span><br><span class="line"><span class="comment">      * C:\PAL_FINAL\</span></span><br><span class="line"><span class="comment">      * C:\PAL_REAL_FINAL_DONT_TOUCH\</span></span><br><span class="line"><span class="comment">   * 場景：團隊成員過來回報：「姚大，我用昨天的版本測，李逍遙學會御劍術後，回客棧畫面就黑掉了。」姚仙一查，快要崩潰：「你抓的是 PAL_NEW 還是 PAL_FINAL？那是上週的舊 Bug，我已經在 REAL_FINAL 改過了！快把你的磁碟機拿過來，我拷貝最新編譯的 EXE 給你！」</span></span><br></pre></td></tr></table></figure>
 <h2 id="週五：週末前的「大統整（Manual-Integration）」與燒錄備份"><a href="#週五：週末前的「大統整（Manual-Integration）」與燒錄備份" class="headerlink" title="週五：週末前的「大統整（Manual Integration）」與燒錄備份"></a>週五：週末前的「大統整（Manual Integration）」與燒錄備份</h2><ul>
 <li>PM 05:00 實體備份儀式</li>
 <li>場景：一週的開發進入尾聲，必須做出一個能玩到揚州城結束的穩定版本。<ul>
@@ -763,14 +750,14 @@
 <td>使用 git blame 一秒查出是誰在哪一天改了哪一行。</td>
 </tr>
 <tr>
-<td>版本衝突（Conflict）</td>
+<td>版本衝突</td>
 <td>完全靠肉眼比對、或直接覆蓋，覆蓋錯了只能從昨天的備份磁碟機重寫。</td>
 <td>Git 會自動標示衝突區塊，由工程師進行 git merge。</td>
 </tr>
 <tr>
 <td>歷史紀錄回滾</td>
 <td>找出上週燒錄的實體光碟，重新讀取，但這週寫的程式就全部沒了。</td>
-<td>使用 git checkout <commit_id>，精準回到任一歷史時間點。</td>
+<td>使用 git checkout &lt;commit_id&gt;，精準回到任一歷史時間點。</td>
 </tr>
 </tbody></table>
 <p>結論：<br>在沒有 Git 的時代，《仙劍一》之所以耗時兩年四個月才完工，除了姚壯憲對劇情的精益求精外，極高的「人肉管理成本」與「版本混亂引發的 Bug」也是主因。那一代的經典，全靠開發者們用超乎常人的記憶力、便條紙、以及一盒盒的 3.5 吋磁碟機，在無數次「代碼被覆蓋」的崩潰淚水中，純手工拼湊出來的。</p>
